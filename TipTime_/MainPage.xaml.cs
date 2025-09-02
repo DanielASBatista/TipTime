@@ -2,23 +2,30 @@
 {
     public partial class MainPage : ContentPage
     {
-        int count = 0;
-
         public MainPage()
         {
-            InitializeComponent();
+            //InitializeComponent();
+        }
+        private void DescQuinzeBtn(object sender, EventArgs e)
+        {
+            PorcentagemSlider.Value = 15;
         }
 
-        private void OnCounterClicked(object sender, EventArgs e)
+        private void DescVinteBtn (object sender, EventArgs e)
         {
-            count++;
+            PorcentagemSlider.Value = 20;
+        }
+        private void RDBtn (object sender, EventArgs e)
+        {
 
-            if (count == 1)
-                CounterBtn.Text = $"Clicked {count} time";
-            else
-                CounterBtn.Text = $"Clicked {count} times";
+        }
+        private void RedBaixo_Clicked (object sender, EventArgs e)
+        {
 
-            SemanticScreenReader.Announce(CounterBtn.Text);
+        }
+        private void PorcentagemSlider_ValueChanged(object sender, ValueChangedEventArgs e)
+        {
+
         }
     }
 
